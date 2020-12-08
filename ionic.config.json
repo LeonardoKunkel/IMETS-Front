@@ -1,0 +1,7 @@
+{
+  "name": "IMETS-Front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
