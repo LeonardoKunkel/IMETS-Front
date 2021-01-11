@@ -1,0 +1,119 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="goGestion()">
+        <ion-icon slot="icon-only" name="file-tray-full-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Inventario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="getDiametros()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="search-outline"></ion-icon>
+    Buscar
+  </ion-button>
+  <ion-row>
+    <ion-col size="3">
+      <ion-item>
+        <ion-label>Seleccionar Diámetro</ion-label>
+        <ion-select interface="popover"
+                    name="diametro"
+                    [(ngModel)]="datos.diametro">
+          <ion-select-option *ngFor="let s of specs" [value]="s.diametro">{{ s.diametro }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col size="3">
+      <ion-item>
+        <ion-label>Seleccionar Grado</ion-label>
+        <ion-select interface="popover"
+                    name="grado"
+                    [(ngModel)]="datos.grado">
+          <ion-select-option *ngFor="let s of specs" [value]="s.grado">{{ s.grado }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col size="3">
+      <ion-item>
+        <ion-label>Seleccionar Libraje (lb/p)</ion-label>
+        <ion-select interface="popover"
+                    name="libraje"
+                    [(ngModel)]="datos.libraje">
+          <ion-select-option *ngFor="let s of specs" [value]="s.libraje">{{ s.libraje }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col size="3">
+      <ion-item>
+        <ion-label>Seleccionar Conexión de Piñón</ion-label>
+        <ion-select interface="popover"
+                    name="conexP"
+                    [(ngModel)]="datos.conexP">
+          <ion-select-option *ngFor="let s of specs" [value]="s.conexP">{{ s.conexP }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col *ngFor="let datos of specs" size="4">
+      <ion-card >
+        <ion-card-header>
+          <ion-card-subtitle>Ubicación: {{ datos.specs.ubicacion }}</ion-card-subtitle>
+          <ion-card-subtitle>Descripción: {{ datos.descripcion }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label>
+                <h2>Diámetro: {{ datos.diametro }}</h2>
+                <h2>Grado: {{ datos.grado }}</h2>
+              </ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>
+                <h2>Libraje (lb/p): {{ datos.libraje }}</h2>
+                <h2>Conexión piñón: {{ datos.conexP }}</h2>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-label>
+                <p>Conexión caja: {{ datos.conexionCaja }}</p>
+                <p>Nuevos: {{ datos.specs.nuevos }}</p>
+                <p>Premium: {{ datos.specs.premium }}</p>
+                <p>Por Maquinar: {{ datos.specs.maquinar }}</p>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4">
+              <ion-label>
+                <p>Por Cambio de Junta: {{ datos.specs.cambio }}</p>
+                <p>Por Inspeccionar: {{ datos.specs.inspeccionar }}</p>
+                <p>Por dar de Baja: {{ datos.specs.baja }}</p>
+                <p>Perdidas: {{ datos.specs.perdidas }}</p>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4">
+              <ion-label>
+                <p>Cementados: {{ datos.specs.cementados }}</p>
+                <p>Chuecos: {{ datos.specs.chuecos }}</p>
+                <p>Sin Revestimiento: {{ datos.specs.sinRevestimiento }}</p>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+          <br>
+          <ion-footer>
+            <ion-toolbar>
+              <h3><b>TOTAL: {{ datos.specs.total }}</b></h3>
+            </ion-toolbar>
+          </ion-footer>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

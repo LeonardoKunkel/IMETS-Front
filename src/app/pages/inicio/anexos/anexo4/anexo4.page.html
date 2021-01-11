@@ -1,0 +1,158 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio/anexos"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      INTEGRACION DE GRUPO MULTIDISCIPLINARIO PARA APLICACIÓN DE PROTOCOLO DE REVISION DE SEGURIDAD DE PREARRANQUE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="pdf()">
+      <ion-icon name="print-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid fixed>
+    <ion-card>
+      <ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-label>Hora y Fecha del inicio de la RSPA</ion-label>
+            <ion-datetime
+            display-format="DD.MM.YYYY HH:mm"
+            name="fecha1"
+            [(ngModel)]="datos.fecha1"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Plataforma</ion-label>
+            <ion-input
+            type="text"
+            name="plataforma"
+            [(ngModel)]="datos.plataforma"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Equipo</ion-label>
+            <ion-input
+            type="text"
+            name="equipo"
+            [(ngModel)]="datos.equipo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Pozo / Localización</ion-label>
+            <ion-input
+            type="text"
+            name="pozoLoc"
+            [(ngModel)]="datos.pozoLoc"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-subtitle>
+          Relación de integrantes que conforman el Grupo Multidisciplinario de
+          Revisión de Seguridad de Pre-Arranque:
+        </ion-card-subtitle>
+          <ion-row>
+            <ion-col size="12" sizeMd="6" sizeLg="4">
+              <ion-list>
+                <ion-item>
+                  <ion-label position="floating">Departamento</ion-label>
+                  <ion-input
+                  type="text"
+                  name="departamento1"
+                  [(ngModel)]="datos.departamento1"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="nombre1"
+                  [(ngModel)]="datos.nombre1"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Ficha</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="ficha1"
+                  [(ngModel)]="datos.ficha1"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Función</ion-label>
+                  <ion-button (click)="openAlert()" slot="end">
+                    <ion-icon slot="icon-only" name="add"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col size="12" sizeMd="6" sizeLg="4">
+              <ion-list>
+                <ion-item>
+                  <ion-label position="floating">Departamento</ion-label>
+                  <ion-input
+                  type="text"
+                  name="departamento2"
+                  [(ngModel)]="datos.departamento2"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="nombre2"
+                  [(ngModel)]="datos.nombre2"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Ficha</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="ficha2"
+                  [(ngModel)]="datos.ficha2"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Función</ion-label>
+                  <ion-button (click)="openAlert()" slot="end">
+                    <ion-icon slot="icon-only" name="add"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col size="12" sizeMd="6" sizeLg="4">
+              <ion-list>
+                <ion-item>
+                  <ion-label position="floating">Departamento</ion-label>
+                  <ion-input
+                  type="text"
+                  name="departamento3"
+                  [(ngModel)]="datos.departamento3"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="nombre3"
+                  [(ngModel)]="datos.nombre3"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Ficha</ion-label>
+                  <ion-input 
+                  type="text"
+                  name="ficha3"
+                  [(ngModel)]="datos.ficha3"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Función</ion-label>
+                  <ion-button (click)="openAlert()" slot="end">
+                    <ion-icon slot="icon-only" name="add"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-button (click)="upload()" type="submit" expand="block" color="success">
+            Subir datos
+          </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>

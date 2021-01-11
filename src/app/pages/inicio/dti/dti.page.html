@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Instructivo de trabajo para Desmantelar, Transportar e Instalar (DTI)</ion-title>
+  </ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)"
+                color="tertiary">
+    
+    <ion-segment-button value="transporte">
+      <ion-label>Transporte</ion-label>
+    </ion-segment-button>
+    
+    <ion-segment-button value="instalación">
+      <ion-label>Instalación</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar></ion-progress-bar>
+  <ion-row>
+    <ion-col size="12" sizeMd="6" sizeLg="6">
+      <ion-card *ngFor="let datos of (hyperDatos | async) | filtro: tipo: 'tipo'">
+        <!-- <ion-card *ngFor="let datos of (hyperDatos) | filtro: tipo: ''"> -->
+        <ion-card-header color="secondary">
+          <ion-card-title>Días de {{ datos.tipo }}: {{ datos.dias }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ datos.actividad }}
+        </ion-card-content>
+        <ion-item color="light">
+          <ion-label>Porcentaje: {{ datos.porcentaje }}</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" sizeMd="6" sizeLg="6">
+      <ion-list>
+        <ion-card *ngFor="let info of actividades | filtro: tipo: 'tipo'">
+          <ion-card-header color="warning">
+            <ion-card-title>Días de {{ info.tipo }}:</ion-card-title>
+            <ion-button (click)="delete(info._id)" fill="clear">
+              <ion-icon color="danger" slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-card-header>
+          <ion-card-content>
+            {{info.descripcion}}
+            <ion-progress-bar [value]="info.porcentaje / 100"></ion-progress-bar>
+          </ion-card-content>
+          <ion-item color="light">
+            <ion-label>Porcentaje: {{info.porcentaje}}%</ion-label>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <form #formulario="ngForm" (ngSubmit)="postDti()">
+            <ion-card-header>
+              <ion-item>
+                <ion-label position="floating">Actividad</ion-label>
+                <ion-textarea
+                name="descripcion"
+                [(ngModel)]="datos.descripcion"
+                required>
+                </ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Porcentaje</ion-label>
+                <ion-input name="actividad" [(ngModel)]="datos.porcentaje" required></ion-input>
+              </ion-item>
+            </ion-card-header>
+            <ion-button type="submit" expand="block" shape="round">
+              Guardar actividad
+            </ion-button>
+          </form>
+        </ion-card>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

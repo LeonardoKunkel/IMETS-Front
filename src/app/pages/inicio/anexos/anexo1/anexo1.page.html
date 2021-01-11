@@ -1,0 +1,2729 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio/anexos"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Lista de verificación de aspectos administrativos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="pdf()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" type="submit" (click)="subir()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-row>
+    <ion-col size="12" sizeMd="4" sizeLg="3">
+      <ion-item>
+        <ion-label position="floating">Región</ion-label>
+        <ion-input
+        type="text"
+        name="T1"
+        [(ngModel)]="datos.T1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Plataforma</ion-label>
+        <ion-input
+        type="text"
+        name="T2"
+        [(ngModel)]="datos.T2"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="12" sizeMd="4" sizeLg="5">
+      <ion-item>
+        <ion-label position="floating">Centro de trabajo</ion-label>
+        <ion-input
+        type="text"
+        name="T3"
+        [(ngModel)]="datos.T3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Equipo</ion-label>
+        <ion-input
+        type="text"
+        name="T4"
+        [(ngModel)]="datos.T4"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="12" sizeMd="4" sizeLg="3">
+      <ion-item>
+        <ion-label position="floating">Fecha</ion-label>
+        <ion-datetime
+        display-format="DD.MM.YYYY"
+        name="F1"
+        [(ngModel)]="datos.F1"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Localización / Pozo</ion-label>
+        <ion-input
+        type="text"
+        name="T5"
+        [(ngModel)]="datos.T5"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-slides>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            1.0 Tecnología del Proceso
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1 ¿Se cuenta con el paquete del proceso?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C1"
+              [(ngModel)]="datos.C1">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T6"
+            [(ngModel)]="datos.T6"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.1 Bases de diseño del proceso</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C2"
+              [(ngModel)]="datos.C2">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T6"
+            [(ngModel)]="datos.T7"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.1.a ¿Se cuenta con el programa autorizado del pozo a intervenir?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C3"
+              [(ngModel)]="datos.C3">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T8"
+            [(ngModel)]="datos.T8"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              1.1.1.b ¿Se cuenta el programa al menos con las siguientes variables críticas: 
+              <ul>
+                <li>Profundidad total</li>
+                <li>Presión maxima esperada</li>
+                <li>Temperatura máxima esperada</li>
+                <li>Peso máximo esperado</li>
+                <li>Tipo de fluido a utilizar</li>
+                <li>contenido de H2S</li>
+              </ul>
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C4"
+              [(ngModel)]="datos.C4">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T9"
+            [(ngModel)]="datos.T9"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.2 Bases de Diseño del diseño</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C5"
+              [(ngModel)]="datos.C5">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T10"
+            [(ngModel)]="datos.T10"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              1.1.2.a ¿Se cuenta con la ficha técnica del equipo <b>actualizada</b> y cumple con las caracteristicas
+              técnicas requeridas por el proceso, de acuerdo a las variables criticas esperadas?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C6"
+              [(ngModel)]="datos.C6">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T11"
+            [(ngModel)]="datos.T11"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              1.1.2.b ¿Se cuenta con el diagrama  de la instalación y distribucion del equipo?
+              ¿Se encuentran actualizados?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C7"
+              [(ngModel)]="datos.C7">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T12"
+            [(ngModel)]="datos.T12"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.2.c ¿Se cuenta con los diagramas unifilares y DTIS actualizados?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C8"
+              [(ngModel)]="datos.C8">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T13"
+            [(ngModel)]="datos.T13"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.2.d ¿Se cuenta con el diagrama de clasificación de áreas eléctricas?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C9"
+              [(ngModel)]="datos.C9">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T14"
+            [(ngModel)]="datos.T14"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              1.1.2.e ¿Se cuenta con planos de la red de contraincendio (hidrantes, monitores, sistemas de
+              aspersión y extintores)?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C10"
+              [(ngModel)]="datos.C10">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T15"
+            [(ngModel)]="datos.T15"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              1.1.2.f ¿Se cuenta con los planos de localización del sistema de detección de humo, gas y fuego?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C11"
+              [(ngModel)]="datos.C11">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T16"
+            [(ngModel)]="datos.T16"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.2.g ¿Se cuenta con el plano de distribución de equipo de seguridad y salvamento?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C12"
+              [(ngModel)]="datos.C12">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T17"
+            [(ngModel)]="datos.T17"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.3 Hojas de datos de seguridad de los materiales del proceso</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C13"
+              [(ngModel)]="datos.C13">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T18"
+            [(ngModel)]="datos.T18"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>1.1.3.a ¿Se cuenta con las hojas de seguridad de productos químicos por utilizar en el proceso?</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C14"
+              [(ngModel)]="datos.C14">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T19"
+            [(ngModel)]="datos.T19"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            2.0 Análisis de Riesgos de Procesos
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            <h4>2.1 Se cuenta con el análisis de riesgos  de procesos que consta de:</h4>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>2.1.1 Análisis de riesgo de los sistemas operativos del equipo</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C15"
+              [(ngModel)]="datos.C15">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T20"
+            [(ngModel)]="datos.T20"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>2.1.2 Análisis de riesgo del proceso de perforación del pozo</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C16"
+              [(ngModel)]="datos.C16">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T21"
+            [(ngModel)]="datos.T21"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>2.1.3 Análisis de riesgo del medio ambiente</h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C86"
+              [(ngModel)]="datos.C86">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T91"
+            [(ngModel)]="datos.T91"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              2.2 ¿Se atendieron en tiempo y forma todas las recomendaciones derivadas de los analisis de riesgo?
+            </h4> 
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C17"
+              [(ngModel)]="datos.C17">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T22"
+            [(ngModel)]="datos.T22"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              2.3 ¿El personal del equipo / instalación incluyendo los contratistas, conocen las
+              recomendaciones del análisis de riesgo del proceso a desarrollarse?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C18"
+              [(ngModel)]="datos.C18">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T23"
+            [(ngModel)]="datos.T23"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              2.4 ¿Se cuenta en el equipo / instalacion con la matriz de consecuencias y considera el
+              escenario mas catastrófico y probable contemplado para el proceso a desarrollar?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C19"
+              [(ngModel)]="datos.C19">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T24"
+            [(ngModel)]="datos.T24"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            3.0 Procedimientos de operación y prácticas seguras de trabajo
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              3.1 ¿Se cuenta con el Manual de Operación del Equipo? Y este contempla procedimientos operativos
+              que incluyen riesgos y capas de protección,así como las recomendaciones de los analisis  de
+              riesgos de proceso?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C20"
+              [(ngModel)]="datos.C20">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T25"
+            [(ngModel)]="datos.T25"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              3.2 ¿Se cuenta con los  procedimientos criticos que salvan vidas y están vigentes y actualizados?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C21"
+              [(ngModel)]="datos.C21">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T26"
+            [(ngModel)]="datos.T26"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              3.3 ¿Los procedimientos de operación normal y de emergencia estan disponibles y actualizados?
+              ¿incluyen los límites de operación segura del proceso, así como las instrucciones para corregir
+              o evitar desviaciones y las consecuencias de estas desviaciones?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C22"
+              [(ngModel)]="datos.C22">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T27"
+            [(ngModel)]="datos.T27"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              3.4 ¿Los procedimientos contemplan  el manejo adecuado de los residuos que se generan en el proceso a desarrollar?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C23"
+              [(ngModel)]="datos.C23">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T28"
+            [(ngModel)]="datos.T28"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              3.5 ¿Se cuenta con los instructivos de operación de los componentes criticos del equipo o instalación?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C24"
+              [(ngModel)]="datos.C24">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T29"
+            [(ngModel)]="datos.T29"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            4.0 Administración de cambios de Tecnología
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="4" size-md="6" size-lg="6" class="ion-text-justify">
+            <h4>
+              4.1 ¿Se cuenta con el procedimiento para la administración de cambios de tecnologia,
+              está vigente y actualizado?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C25"
+              [(ngModel)]="datos.C25">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T30"
+            [(ngModel)]="datos.T30"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              4.2 ¿Se cuenta con el registro de los cambios tecnológicos realizados al equipo / instalación?
+              ¿Se dispone de la documentación respectiva que demuestre que se siguió el procedimiento mencionado?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C26"
+              [(ngModel)]="datos.C26">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T31"
+            [(ngModel)]="datos.T31"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              4.3 ¿Se encuentra actualizado el paquete tecnológico con respecto a los cambios tecnológicos
+              registrados en el SIAC?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C27"
+              [(ngModel)]="datos.C27">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T32"
+            [(ngModel)]="datos.T32"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              4.4 ¿Se llevó a cabo el análisis de riesgo del proceso, para contemplar los nuevos riesgos de
+              acuerdo a la incorporación de los cambios de tecnología?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C28"
+              [(ngModel)]="datos.C28">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T33"
+            [(ngModel)]="datos.T33"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              4.5 ¿El personal del equipo / instalación conoce estos cambios? ¿Los procedimientos operativos
+              se actualizaron contemplando los riesgos generados por el cambio de tecnología y se contemplan
+              sus medidas preventivas?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C29"
+              [(ngModel)]="datos.C29">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T34"
+            [(ngModel)]="datos.T34"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            5.0 Entrenamiento y Desempeño del Personal
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              5.1 ¿Se cuenta con la relación  actualizada de los instructivos de trabajo que aplica a cada
+              categoria del equipo / instalación?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C30"
+              [(ngModel)]="datos.C30">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T35"
+            [(ngModel)]="datos.T35"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              5.2 ¿Existen evidencias de que el personal involucrado en la operación y mantenimiento ha sido
+              entrenado o reentrenado  de acuerdo a los instructivos de trabajo?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C31"
+              [(ngModel)]="datos.C31">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T36"
+            [(ngModel)]="datos.T36"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            6.0 Seguridad en Contratistas
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.1 ¿Existen evidencias de que los contratistas fueron entrenados y conocen los aspectos de
+              Seguridad, Salud y Protección Ambiental relacionados con las áreas de trabajo y actividades
+              a desarrollar?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C32"
+              [(ngModel)]="datos.C32">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T37"
+            [(ngModel)]="datos.T37"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.1.a ¿Los contratistas cuentan con la información de tecnología del proceso del pozo que se interviene?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C33"
+              [(ngModel)]="datos.C33">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T38"
+            [(ngModel)]="datos.T38"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.1.b ¿Los contratistas cuentan con procedimientos de operación / mantenimiento de las actividades
+              que realizaran dentro del proceso del pozo que se interviene?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C34"
+              [(ngModel)]="datos.C34">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T39"
+            [(ngModel)]="datos.T39"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.1.c ¿Se cuenta con un censo de la capacitación del personal contratista que realiza funciones
+              dentro del proceso del pozo que se interviene?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C35"
+              [(ngModel)]="datos.C35">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T40"
+            [(ngModel)]="datos.T40"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.1.d. ¿Los contratistas cumplen con el equipo de protección personal básico y especial que se
+              requiere para las operaciones del proceso a desarrollar?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C36"
+              [(ngModel)]="datos.C36">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T41"
+            [(ngModel)]="datos.T41"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              6.2.¿El personal de contratistas conoce las recomendaciones del análisis de riesgo así como el
+              plan de respuesta a emergencia del proceso a desarrollarse?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C37"
+              [(ngModel)]="datos.C37">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T42"
+            [(ngModel)]="datos.T42"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            7.0 Administración de cambios de Personal
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              7.1 ¿Existe un mecanismo para asegurar que el perfil de candidatos a puestos de categorías
+              críticas cumpla con el perfil de los puestos requeridos?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C38"
+              [(ngModel)]="datos.C38">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T43"
+            [(ngModel)]="datos.T43"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              7.2 ¿Ha habido cambios de personas que tenían roles en emergencia o eran parte de las brigadas
+              de respuesta a emergencias? ¿Los nuevos integrantes cumplen con el perfil requerido?
+              ¿Han sido entrenados?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C39"
+              [(ngModel)]="datos.C39">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T44"
+            [(ngModel)]="datos.T44"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              7.3 ¿Se cuenta con el procedimiento vigente y actualizado de la administración de cambios de
+              personal?  ¿Se aplica en  los cambios de personal?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C40"
+              [(ngModel)]="datos.C40">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T45"
+            [(ngModel)]="datos.T45"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            8.0 Investigación de Incidentes y Accidentes
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              8.1 ¿Se cuenta con el control estadístico de incidentes / accidentes? ¿Incluye las Metas y
+              Objetivos de la UNP referentes al Indice de Gravedad y de Frecuencia?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C41"
+              [(ngModel)]="datos.C41">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T46"
+            [(ngModel)]="datos.T46"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              8.2 ¿Los mismos fueron investigados conforme al procedimiento vigente? ¿Hay recomendaciones
+              que no han sido cumplidas?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C42"
+              [(ngModel)]="datos.C42">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T47"
+            [(ngModel)]="datos.T47"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              8.3 ¿Hubo una amplia difusión entre el personal de UNP?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C43"
+              [(ngModel)]="datos.C43">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T48"
+            [(ngModel)]="datos.T48"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            9.0 Plan de Respuesta a Emergencias
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              9.1 ¿Existe un plan de respuesta a emergencias autorizado y el personal designado en los roles
+              correspondientes esta entrenado en los procedimientos de respuesta a emergencias?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C44"
+              [(ngModel)]="datos.C44">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T49"
+            [(ngModel)]="datos.T49"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              9.2 ¿Se cuenta con croquis que muestre: la organización para la respuesta a emergencia del
+              equipo / instalación, procedimientos para cada escenario, la ruta de evacuación, punto de
+              reunión, localización de extintores, detectores y alarmas indicadas?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C45"
+              [(ngModel)]="datos.C45">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T50"
+            [(ngModel)]="datos.T50"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              9.3 ¿El plan de respuesta a emergencia es consistente con los escenarios del ARP del
+              equipo / instalación? ¿se actualiza conforme a la administración de cambios de tecnología y
+              cambios menores?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C46"
+              [(ngModel)]="datos.C46">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T51"
+            [(ngModel)]="datos.T51"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              9.4 ¿Se cuenta con programa de simulacros para cada escenario del plan de respuesta a
+              emergencias? ¿Existen evidencias de cumplimiento del mencionado programa?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C47"
+              [(ngModel)]="datos.C47">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T52"
+            [(ngModel)]="datos.T52"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            10.0 Integridad Mecánica y Aseguramiento de la calidad
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              10.1 ¿Se cuenta con el programa de mantenimiento preventivo y predictivo de los componentes
+              críticos del equipo, autorizado?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C48"
+              [(ngModel)]="datos.C48">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T53"
+            [(ngModel)]="datos.T53"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              10.2 ¿Se cuenta con planes y programas de las inspecciones y prueba de los componentes críticos
+              para garantizar la integridad mecánica de los sistemas operacionales tales como: sistema de izaje
+              y rotación, sistema de generación, sistema de bombeo de fluidos, sistema de control superficial y
+              sistema de seguridad y salvamento?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C49"
+              [(ngModel)]="datos.C49">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T54"
+            [(ngModel)]="datos.T54"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            10.2.a Sistema de izaje y rotación:
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de tambores y balatas de frenado / discos
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C50"
+              [(ngModel)]="datos.C50">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T55"
+            [(ngModel)]="datos.T55"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y récord del cable de operación (ton/km) y ancla de la línea muerta
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C51"
+              [(ngModel)]="datos.C51">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T56"
+            [(ngModel)]="datos.T56"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de corona
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C52"
+              [(ngModel)]="datos.C52">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T57"
+            [(ngModel)]="datos.T57"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de paro de emergencia
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C53"
+              [(ngModel)]="datos.C53">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T58"
+            [(ngModel)]="datos.T58"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de embragues de alta y baja
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C54"
+              [(ngModel)]="datos.C54">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T59"
+            [(ngModel)]="datos.T59"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de calibración de poleas
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C55"
+              [(ngModel)]="datos.C55">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T60"
+            [(ngModel)]="datos.T60"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de mástil/torre y subestructura
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C56"
+              [(ngModel)]="datos.C56">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T61"
+            [(ngModel)]="datos.T61"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y calibración de indicador de peso
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C57"
+              [(ngModel)]="datos.C57">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T62"
+            [(ngModel)]="datos.T62"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección , pruebas y certificados de gruas
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C58"
+              [(ngModel)]="datos.C58">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T63"
+            [(ngModel)]="datos.T63"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección , pruebas y certificados de malacates neumáticos
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C59"
+              [(ngModel)]="datos.C59">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T64"
+            [(ngModel)]="datos.T64"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro  de permisos para trabajo con riesgo (izaje de mástil)
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C60"
+              [(ngModel)]="datos.C60">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T65"
+            [(ngModel)]="datos.T65"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            10.2.b Sistema de generación:
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de equipo de acuerdo a las áreas eléctricas clasificadas
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C61"
+              [(ngModel)]="datos.C61">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T66"
+            [(ngModel)]="datos.T66"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección  y medición de sistema de tierras
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C62"
+              [(ngModel)]="datos.C62">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T67"
+            [(ngModel)]="datos.T67"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de aplicación de tarjeta-candado (certificados de aislamiento SPPTR)
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C63"
+              [(ngModel)]="datos.C63">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T68"
+            [(ngModel)]="datos.T68"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Órdenes de trabajo del mantenimiento de unidad de aire acondicionado en la PCR
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C64"
+              [(ngModel)]="datos.C64">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T69"
+            [(ngModel)]="datos.T69"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y licencia de funcionamiento de recipientes sujetos a presión, por cada recipente.
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C65"
+              [(ngModel)]="datos.C65">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T70"
+            [(ngModel)]="datos.T70"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            10.2.c Sistema de bombeo de fluidos:
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y calibración de la válvula de seguridad
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C66"
+              [(ngModel)]="datos.C66">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T71"
+            [(ngModel)]="datos.T71"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección de bombas para lodo
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C67"
+              [(ngModel)]="datos.C67">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T72"
+            [(ngModel)]="datos.T72"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspeccion y prueba del stand pipe,tuberia,unión giratoria y mangera de perforación
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C68"
+              [(ngModel)]="datos.C68">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T73"
+            [(ngModel)]="datos.T73"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba del equipo de control de sólidos
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C69"
+              [(ngModel)]="datos.C69">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T74"
+            [(ngModel)]="datos.T74"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de vida útil de los componetes del extremo hidráulico
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C70"
+              [(ngModel)]="datos.C70">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T75"
+            [(ngModel)]="datos.T75"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            10.2.d  Sistema de control superficial:
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba de preventores de acuerdo a etapa
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C71"
+              [(ngModel)]="datos.C71">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T76"
+            [(ngModel)]="datos.T76"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba de la bomba para operar preventores
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C72"
+              [(ngModel)]="datos.C72">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T77"
+            [(ngModel)]="datos.T77"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba del ensamble de estrangulación y consola
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C73"
+              [(ngModel)]="datos.C73">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T78"
+            [(ngModel)]="datos.T78"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba de línea de matar y estrangular
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C87"
+              [(ngModel)]="datos.C87">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T92"
+            [(ngModel)]="datos.T92"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y prueba de separador de gas-lodo
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C74"
+              [(ngModel)]="datos.C74">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T79"
+            [(ngModel)]="datos.T79"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" class="minidiv">
+            10.2.e  Sistema de Seguridad y Salvamento:
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y pruebas de Red  contraincendio, incluyendo Bombas
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C75"
+              [(ngModel)]="datos.C75">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T80"
+            [(ngModel)]="datos.T80"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección, pruebas y certificados de botes salvavidas
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C76"
+              [(ngModel)]="datos.C76">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T81"
+            [(ngModel)]="datos.T81"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y pruebas del sistema de detección de humo, gas y fuego
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C77"
+              [(ngModel)]="datos.C77">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T82"
+            [(ngModel)]="datos.T82"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección, pruebas  y certificados de vigencia en los extintores portátiles
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C78"
+              [(ngModel)]="datos.C78">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T83"
+            [(ngModel)]="datos.T83"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección, pruebas y certificados de vigencia de los equipos fijo y semifijo de extinción
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C79"
+              [(ngModel)]="datos.C79">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T84"
+            [(ngModel)]="datos.T84"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="4" size-md="6" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y pruebas de lava ojos y regaderas de emergencias
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C80"
+              [(ngModel)]="datos.C80">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T85"
+            [(ngModel)]="datos.T85"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              - Registro de inspección y pruebas de equipo de respiración autónomo
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C81"
+              [(ngModel)]="datos.C81">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T86"
+            [(ngModel)]="datos.T86"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            11.0 Administración de cambios menores
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              11.1 ¿Los cambios realizados durante la operación, modificación, rehabilitación, instalación
+              y desmantelamiento de los equipos estan documentados, autorizados, realizados y difundidos?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C82"
+              [(ngModel)]="datos.C82">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T87"
+            [(ngModel)]="datos.T87"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            12.0 Medio Ambiente
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              12.1 ¿Todas las licencias y permisos ambientales requeridas han sido obtenidas?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C83"
+              [(ngModel)]="datos.C83">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T88"
+            [(ngModel)]="datos.T88"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              12.2 ¿Existen procedimientos para disposición de residuos peligrosos de manejo especial y
+              sólidos urbanos?. ¿Se aplican? Presentar evidencias
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C84"
+              [(ngModel)]="datos.C84">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T89"
+            [(ngModel)]="datos.T89"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="divisor">
+            13.0 Administración de cambios menores
+          </ion-col>
+        </ion-row>
+        <ion-row class="header">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-center">
+            Requisitos de ASP
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2" class="ion-text-center">
+            Estado
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4" class="ion-text-center">
+            Observaciones
+          </ion-col>
+        </ion-row>
+        <ion-row class="data-row">
+          <ion-col size="12" size-md="8" size-lg="6" class="ion-text-justify">
+            <h4>
+              13.1 ¿Se cuenta con el Atlas de Riesgo vigente y autorizado de la instalación y es conocido por el personal?
+            </h4>
+          </ion-col>
+          <ion-col size="12" size-md="4" size-lg="2">
+            <ion-item>
+              <ion-label color="primary">¿Cumple?</ion-label>
+              <ion-select 
+              interface="popover"
+              name="C85"
+              [(ngModel)]="datos.C85">
+                <ion-select-option value="Si">Si</ion-select-option>
+                <ion-select-option value="No">No</ion-select-option>
+                <ion-select-option value="No Aplica">No Aplica</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="12" size-lg="4">
+            <ion-input
+            type="text"
+            placeholder="Observaciones"
+            name="T90"
+            [(ngModel)]="datos.T90"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

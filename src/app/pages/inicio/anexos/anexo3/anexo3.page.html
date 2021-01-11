@@ -1,0 +1,85 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio/anexos"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Informe atención de hallazgos impeditivos y solicitud de inicio de operaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="pdf()">
+      <ion-icon name="print-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>ANEXO 3</ion-card-subtitle>
+            <ion-card-title>Solicitud de aplicación de protocolo de revisión de seguridad de prearranque</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Deberás de llenar los siguientes campos para poder imprimir el formato con los datos específicos.</p>
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Fecha & Hora de la solicitud</ion-label>
+                <ion-datetime
+                display-format="DD.MM.YYYY HH:mm"
+                name="fecha1"
+                [(ngModel)]="anex3.fecha1"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">División</ion-label>
+                <ion-input
+                type="text"
+                name="division"
+                [(ngModel)]="anex3.division"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Unidad operativa</ion-label>
+                <ion-input
+                type="text"
+                name="unidadOp"
+                [(ngModel)]="anex3.unidadOp"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Plataforma</ion-label>
+                <ion-input
+                type="text"
+                name="plataforma"
+                [(ngModel)]="anex3.plataforma"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Equipo</ion-label>
+                <ion-input
+                type="text"
+                name="equipo"
+                [(ngModel)]="anex3.equipo"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Pozo / Localización</ion-label>
+                <ion-input
+                type="text"
+                name="pozoLoc"
+                [(ngModel)]="anex3.pozoLoc"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Fecha & Hora de inicio de la RSPA</ion-label>
+                <ion-datetime
+                display-format="DD.MM.YYYY HH:mm"
+                name="fecha2"
+                [(ngModel)]="anex3.fecha2"></ion-datetime>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+          <ion-button color="success" type="submit" expand="block">
+            Subir datos
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
