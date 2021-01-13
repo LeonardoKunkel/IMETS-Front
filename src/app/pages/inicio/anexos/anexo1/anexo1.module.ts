@@ -8,12 +8,9 @@ import { IonicModule } from '@ionic/angular';
 import { Anexo1PageRoutingModule } from './anexo1-routing.module';
 
 import { Anexo1Page } from './anexo1.page';
-import { PopstuffComponent } from 'src/app/components/popstuff/popstuff.component';
 
 @NgModule({
-  entryComponents: [
-    PopstuffComponent
-  ],
+  entryComponents: [],
   imports: [
     CommonModule,
     FormsModule,

@@ -15,6 +15,10 @@ export class InventarioService {
     return this.http.get(`${this.url}`);
   }
 
+  postInventario(form) {
+    return this.http.post(`${this.url}/create`, form);
+  }
+
   filtroDiametro( param, type ) {
     console.log(param);
     return this.http.get(`${this.url}`).pipe(
