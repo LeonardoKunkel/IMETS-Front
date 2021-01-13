@@ -1,15 +1,15 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PopstuffComponent } from './popstuff/popstuff.component';
 import { IonicModule } from '@ionic/angular';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
     declarations: [
-        PopstuffComponent
+        ProductComponent
     ],
     exports: [
-        PopstuffComponent
+        ProductComponent
     ],
     imports: [
         CommonModule,

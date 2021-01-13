@@ -9,7 +9,46 @@ import { NavController } from '@ionic/angular';
 })
 export class InventarioPage implements OnInit {
   specs: any = [];
-  opcion: '';
+  diametro: any = [
+    '2 7/8',
+    '3 1/2',
+    '4',
+    '4 1/2',
+    '5'
+  ];
+  grado: any = [
+    'X-95',
+    'G-105',
+    'S-135',
+    'E-75',
+    'NA'
+  ];
+  libraje: any = [
+    6.85,
+    13.3,
+    15.5,
+    14,
+    16.6,
+    20,
+    19.5,
+    25.3,
+    27,
+    41,
+    49.3,
+    52
+  ];
+  conexP: any = [
+    'NC-26',
+    'NC-31',
+    'NC-26(izq.)',
+    'NC-31(izq.)',
+    'NC-38',
+    'NC-38(izq.)',
+    'XT-39',
+    'NC-46',
+    'NC-46(izq.)',
+    'NC-50',
+  ];
   datos: any = {
     diametro: '',
     grado: '',

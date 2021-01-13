@@ -13,6 +13,8 @@ export class DTIPage implements OnInit {
   @ViewChild(IonSegment) segment: IonSegment;
 
   hyperDatos: Observable<any>;
+  porcentajeTotal: any = [];
+  probados: '';
   tipo = '';
   datos: any = {
     descripcion: '',
@@ -34,7 +36,14 @@ export class DTIPage implements OnInit {
   }
 
   prueba() {
-    console.log(this.hyperDatos);
+    this.dtiService.getDti().subscribe((data: any) => {
+      console.log(data.dti);
+      const conteo = data.dti;
+      for (let i = 0; i < conteo.length; i++) {
+        const element = conteo[i];
+        console.log(element.porcentaje);
+      }
+    });
   }
 
   segmentChanged( event: any ) {
