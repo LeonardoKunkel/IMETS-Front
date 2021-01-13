@@ -3,6 +3,11 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/inicio"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openModal()">
+        <ion-icon slot="icon-only" name="bar-chart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">Instructivo de trabajo para Desmantelar, Transportar e Instalar (DTI)</ion-title>
   </ion-toolbar>
   <ion-segment (ionChange)="segmentChanged($event)"
