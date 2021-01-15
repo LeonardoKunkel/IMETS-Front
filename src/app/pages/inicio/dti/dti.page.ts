@@ -37,17 +37,6 @@ export class DTIPage implements OnInit {
     this.getDti();
   }
 
-  prueba() {
-    this.dtiService.getDti().subscribe((data: any) => {
-      console.log(data.dti);
-      const conteo = data.dti;
-      for (let i = 0; i < conteo.length; i++) {
-        let element = conteo[i];
-        console.log(element);
-      }
-    });
-  }
-
   segmentChanged( event: any ) {
     const valorSeg = event.detail.value;
     this.tipo = valorSeg;
