@@ -12,28 +12,44 @@
 <ion-content>
   <ion-grid fixed>
     <ion-row>
-      <ion-col size="6">
+      <ion-col size="4">
         <ion-card (click)="goAnexos()">
-          <img src="../../../assets/imagenes/img-terreno.jpg">
           <ion-card-content class="ion-text-center">
-            <ion-card-title>Anexos</ion-card-title>
-          </ion-card-content> 
+            <img src="../../../assets/icon/revision de anexos.png">
+          </ion-card-content>
+          <ion-footer class="ion-no-border">
+            <ion-toolbar color="success">
+              <ion-title class="ion-text-center">Anexos</ion-title>
+            </ion-toolbar>
+          </ion-footer>
         </ion-card>
       </ion-col>
-      <ion-col size="6">
+      <ion-col size="4">
         <ion-card (click)="goDti()">
-          <img src="../../../assets/imagenes/img-pozo.jpg">
           <ion-card-content class="ion-text-center">
-            <ion-card-title>Trabajo para Desmantelar, Transportar e Instalar equipos de Perforación</ion-card-title>
-          </ion-card-content> 
+            <img src="../../../assets/icon/Dti.png">
+          </ion-card-content>
+          <ion-footer class="ion-no-border">
+            <ion-toolbar color="tertiary">
+              <ion-title class="ion-text-center">
+                DTI
+              </ion-title>
+            </ion-toolbar>
+          </ion-footer>
         </ion-card>
       </ion-col>
-      <ion-col size="6">
+      <ion-col size="4">
         <ion-card (click)="goInvent()">
-          <img src="../../../assets/imagenes/img-inventario.jpg">
           <ion-card-content class="ion-text-center">
-            <ion-card-title>Inventario</ion-card-title>
-          </ion-card-content> 
+            <img src="../../../assets/icon/control de inventarios.png">
+          </ion-card-content>
+          <ion-footer class="ion-no-border">
+            <ion-toolbar color="danger">
+              <ion-title class="ion-text-center">
+                Inventario
+              </ion-title>
+            </ion-toolbar>
+          </ion-footer>
         </ion-card>
       </ion-col>
     </ion-row>

@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DTIPage } from './dti.page';
+import { ChartModalPage } from './chart-modal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: DTIPage
-  },
-  {
-    path: 'chart-modal',
-    loadChildren: () => import('./chart-modal/chart-modal.module').then( m => m.ChartModalPageModule)
+    component: ChartModalPage
   }
 ];
 
@@ -18,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DTIPageRoutingModule {}
+export class ChartModalPageRoutingModule {}

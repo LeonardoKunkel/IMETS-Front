@@ -1,5 +1,6 @@
+import { ChartModalPage } from './chart-modal/chart-modal.page';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AlertController, IonSegment, ToastController } from '@ionic/angular';
+import { AlertController, IonSegment, ModalController, ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { DtiService } from 'src/app/services/dti.service';
 
@@ -27,23 +28,13 @@ export class DTIPage implements OnInit {
   constructor(
     public alertCtrl: AlertController,
     private dtiService: DtiService,
-    public toast: ToastController
+    public toast: ToastController,
+    public modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
     this.hyperDatos = this.dtiService.getDtiDatos();
     this.getDti();
-  }
-
-  prueba() {
-    this.dtiService.getDti().subscribe((data: any) => {
-      console.log(data.dti);
-      const conteo = data.dti;
-      for (let i = 0; i < conteo.length; i++) {
-        const element = conteo[i];
-        console.log(element.porcentaje);
-      }
-    });
   }
 
   segmentChanged( event: any ) {
@@ -76,5 +67,12 @@ export class DTIPage implements OnInit {
       duration: 1500
     });
     toast.present();
+  }
+
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: ChartModalPage
+    });
+    await modal.present();
   }
 }
