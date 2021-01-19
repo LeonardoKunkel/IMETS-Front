@@ -25,7 +25,7 @@
         <ion-select interface="popover"
                     name="diametro"
                     [(ngModel)]="datos.diametro">
-          <ion-select-option *ngFor="let s of diametro; let idx = index" [value]="diametro">{{ diametro[idx] }}</ion-select-option>
+          <ion-select-option *ngFor="let s of diametro; let idx = index" [value]="s.diametro">{{ diametro[idx] }}</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>
@@ -35,7 +35,7 @@
         <ion-select interface="popover"
                     name="grado"
                     [(ngModel)]="datos.grado">
-          <ion-select-option *ngFor="let g of grado; let idx = index" [value]="grado">{{ grado[idx] }}</ion-select-option>
+          <ion-select-option *ngFor="let g of grado; let idx = index" [value]="g.grado">{{ grado[idx] }}</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>
@@ -45,7 +45,7 @@
         <ion-select interface="popover"
                     name="libraje"
                     [(ngModel)]="datos.libraje">
-          <ion-select-option *ngFor="let l of libraje; let idx = index" [value]="libraje">{{ libraje[idx] }}</ion-select-option>
+          <ion-select-option *ngFor="let l of libraje; let idx = index" [value]="l.libraje">{{ libraje[idx] }}</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>
@@ -55,7 +55,7 @@
         <ion-select interface="popover"
                     name="conexP"
                     [(ngModel)]="datos.conexP">
-          <ion-select-option *ngFor="let c of conexP; let idx = index" [value]="conexP">{{ conexP[idx] }}</ion-select-option>
+          <ion-select-option *ngFor="let c of conexP; let idx = index" [value]="c.conexP">{{ conexP[idx] }}</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-col>

@@ -6,13 +6,18 @@
         Cerrar Sesión
       </ion-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="config()">
+        <ion-icon slot="icon-only" name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid fixed>
     <ion-row>
-      <ion-col size="4">
+      <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goAnexos()">
           <ion-card-content class="ion-text-center">
             <img src="../../../assets/icon/revision de anexos.png">
@@ -24,7 +29,7 @@
           </ion-footer>
         </ion-card>
       </ion-col>
-      <ion-col size="4">
+      <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goDti()">
           <ion-card-content class="ion-text-center">
             <img src="../../../assets/icon/Dti.png">
@@ -38,7 +43,7 @@
           </ion-footer>
         </ion-card>
       </ion-col>
-      <ion-col size="4">
+      <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goInvent()">
           <ion-card-content class="ion-text-center">
             <img src="../../../assets/icon/control de inventarios.png">

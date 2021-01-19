@@ -89,8 +89,8 @@ export class InventarioPage implements OnInit {
         this.specs = data;
       });
     }
-    if (datos.conexionPinon) {
-      this.inventario.filtroDiametro(datos.conexionPinon, 'conexionPinon').subscribe((data: any) => {
+    if (datos.conexP) {
+      this.inventario.filtroDiametro(datos.conexP, 'conexP').subscribe((data: any) => {
         this.specs = data;
       });
     }

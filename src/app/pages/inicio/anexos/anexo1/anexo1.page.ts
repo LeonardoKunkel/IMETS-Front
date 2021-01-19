@@ -1,5 +1,6 @@
 import { PdfMakerService } from './../../../../services/pdf-maker.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-anexo1',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Anexo1Page implements OnInit {
 
+  footerImg = null;
   datos: any = {
     C1: '',
     C2: '',
@@ -241,6 +243,32 @@ export class Anexo1Page implements OnInit {
   constructor( private pdfMaker: PdfMakerService ) { }
 
   ngOnInit() {
+    this.image64();
+  }
+
+  convertFileDataURLviaFileReader(url: string) {
+    return Observable.create(observer => {
+      const xhr: XMLHttpRequest = new XMLHttpRequest();
+      xhr.onload = function() {
+        const reader: FileReader = new FileReader();
+        reader.onloadend = function() {
+          observer.next(reader.result);
+          observer.complete();
+        };
+        reader.readAsDataURL(xhr.response);
+      };
+      xhr.open('GET', url);
+      xhr.responseType = 'blob';
+      xhr.send();
+    });
+  }
+
+  image64() {
+    this.convertFileDataURLviaFileReader(`../../../../../assets/imagenes/copyright_footer.png`).subscribe(
+      base64 => {
+      this.footerImg = base64;
+      }
+    );
   }
 
   subir() {
@@ -296,21 +324,73 @@ export class Anexo1Page implements OnInit {
   }
 
   pdf() {
+    const footer = this.footerImg;
     const dd = {
       header() {
         return {
           table: {
-            widths: [100, 350, 100],
+            widths: [95, 350, 95],
             body: [
               [
-                {},
-                {text: 'LISTA DE VERIFICACIÓN DE ASPECTOS ADMINISTRATIVOS'},
+                {
+                  // image: 'sampleImage.jpg',
+                  // width: 50,
+                  // height: 50,
+                  // alignment: 'center',
+                  // rowSpan: 2
+                },
+                {text: 'Exploración y Producción', alignment: 'center', bold: true},
                 {}
               ],
+              [
+                {},
+                {
+                  text: [
+                    'Unidad de Negocio de Perforación\nAdministración de la Seguridad de los Procesos (ASP)\n',
+                    {text: 'Revisión de Seguridad de Pre-Arranque', bold: true}
+                  ],
+                  fontSize: 8,
+                  alignment: 'center'
+                },
+                {}
+              ],
+              [
+                {},
+                {text: 'LISTA DE VERIFICACIÓN DE ASPECTOS ADMINISTRATIVOS (Anexo 1)', alignment: 'center', fontSize: 10, bold: true},
+                {}
+            ],
             ]
           },
           layout: 'noBorders',
           margin: [22, 10]
+        };
+      },
+      footer(currentPage, pageCount) {
+        return {
+          table: {
+            headerRows: 1,
+            widths: [510],
+            body: [
+              [
+                {
+                  columns: [
+                    'Página ' + currentPage.toString() + ' de ' + pageCount,
+                  ]
+                }
+              ],
+              [
+                {
+                  image: `${footer}`,
+                  pageBreak: 'after',
+                  width: 510,
+                  height: 55
+                }
+              ],
+              ['']
+            ]
+          },
+          layout: 'headerLineOnly',
+          margin: [72, 20]
         };
       },
       content: [
@@ -1225,7 +1305,7 @@ export class Anexo1Page implements OnInit {
         }
       ],
       pageSize: 'LETTER',
-      pageMargins: [22, 50]
+      pageMargins: [22, 100]
     };
     this.pdfMaker.generate(dd, 'Anexo1');
   }
