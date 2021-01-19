@@ -24,6 +24,7 @@ export class DTIPage implements OnInit {
     tipo: ''
   };
   actividades: any[] = [];
+  prueba: any = [];
 
   constructor(
     public alertCtrl: AlertController,

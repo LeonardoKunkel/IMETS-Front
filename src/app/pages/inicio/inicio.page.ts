@@ -29,4 +29,7 @@ export class InicioPage implements OnInit {
     this.navCtrl.navigateForward('/inicio/inventario');
   }
 
+  config() {
+    this.navCtrl.navigateForward('/inicio/opts');
+  }
 }

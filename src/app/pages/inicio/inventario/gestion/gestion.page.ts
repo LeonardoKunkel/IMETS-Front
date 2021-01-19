@@ -34,6 +34,7 @@ export class GestionPage implements OnInit {
     this.inventario.getInventario().subscribe((data: any) => {
       this.superDatos = data.inv;
       console.log(data.inv);
+      // this.superDatos.push(data.inv[0]);
     });
   }
 
@@ -51,5 +52,4 @@ export class GestionPage implements OnInit {
       console.log(suma);
     });
   }
-
 }

@@ -11,6 +11,7 @@ import { DtiService } from 'src/app/services/dti.service';
 export class ChartModalPage implements OnInit {
 
   datosX: any = [];
+  datosXT: any = [];
   datosYIdeal: any[] = [];
   datosYIdeal2: any[] = [];
   datosYReal: any[] = [];
@@ -31,12 +32,53 @@ export class ChartModalPage implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+  getIdeal() {
+    this.dti.getDtiDatos().subscribe((data: any) => {
+      console.log(data);
+      const conteo = data;
+      for (let i = 0; i < 5; i++) {
+        const element = conteo[i].porcentaje;
+        this.datosYIdeal.push(conteo[i].porcentaje);
+      }
+      console.log(this.datosYIdeal);
+      for (let i = 5; i < 17; i++) {
+        const element = conteo[i].porcentaje;
+        this.datosYIdeal2.push(conteo[i].porcentaje);
+      }
+      console.log(this.datosYIdeal2);
+    });
+  }
+
+  getReal() {
+    this.dti.getDti().subscribe((data: any) => {
+      // console.log(data.dti);
+      const conteo = data.dti;
+      conteo.forEach((elemento) => {
+        if (elemento.tipo === 'transporte') {
+          this.datosYReal.push(elemento.porcentaje);
+        } else {
+          this.datosYReal2.push(elemento.porcentaje);
+        }
+      });
+      for (let i = 0; i <= conteo.length; i++) {
+        this.datosX.push(i + 1);
+      }
+      // console.log(this.datosX);
+      // console.log(this.datosYReal2);
+      const datoX = this.datosYReal.length - 1;
+      for (let i = 0; i <= datoX + 1; i++) {
+        this.datosXT.push(i + 1);
+      }
+      // console.log(this.datosXT);
+    });
+  }
+
   createChart() {
     const ctx = 'myChart';
     const myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Día1', 'Día2', 'Día3', 'Día4', 'Día5'],
+        labels: this.datosXT,
         datasets: [
           {
             label: 'Ideal',
@@ -96,7 +138,7 @@ export class ChartModalPage implements OnInit {
     const myChart2 = new Chart(ctx2, {
       type: 'line',
       data: {
-        labels: ['Día1', 'Día2', 'Día3', 'Día4', 'Día5'],
+        labels: this.datosX,
         datasets: [
           {
             label: 'Ideal',
@@ -149,38 +191,6 @@ export class ChartModalPage implements OnInit {
           }]
         }
       }
-    });
-  }
-
-  getIdeal() {
-    this.dti.getDtiDatos().subscribe((data: any) => {
-      console.log(data);
-      const conteo = data;
-      for (let i = 0; i < 5; i++) {
-        const element = conteo[i].porcentaje;
-        this.datosYIdeal.push(conteo[i].porcentaje);
-      }
-      console.log(this.datosYIdeal);
-      for (let i = 5; i < 17; i++) {
-        const element = conteo[i].porcentaje;
-        this.datosYIdeal2.push(conteo[i].porcentaje);
-      }
-      console.log(this.datosYIdeal2);
-    });
-  }
-
-  getReal() {
-    this.dti.getDti().subscribe((data: any) => {
-      console.log(data.dti);
-      const conteo = data.dti;
-      conteo.forEach((elemento) => {
-        if (elemento.tipo === 'transporte') {
-          this.datosYReal.push(elemento.porcentaje);
-        } else {
-          this.datosYReal2.push(elemento.porcentaje);
-        }
-      });
-      console.log(this.datosYReal2);
     });
   }
 

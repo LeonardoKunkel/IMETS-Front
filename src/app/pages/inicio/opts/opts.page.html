@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label>Dark theme</ion-label>
+      <ion-toggle slot="end" [ngModel]="darkMode" (ionChange)="change()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Awesome Label</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

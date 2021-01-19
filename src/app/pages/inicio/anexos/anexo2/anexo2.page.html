@@ -3,71 +3,84 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/inicio/anexos"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="pdf()">
+        <ion-icon slot="icon-only" name="print-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">Lista de Verificación de Aspectos Operativos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="pdf()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="success" type="submit" (click)="subir()">
-      <ion-icon name="add"></ion-icon>
+      <ion-icon name="cloud-upload-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <ion-row>
-    <ion-col size="12" sizeMd="4" sizeLg="3">
-      <ion-item>
-        <ion-label position="floating">Región</ion-label>
-        <ion-input
-        type="text"
-        name="T1"
-        [(ngModel)]="datos.T1"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Plataforma</ion-label>
-        <ion-input
-        type="text"
-        name="T2"
-        [(ngModel)]="datos.T2"></ion-input>
-      </ion-item>
-    </ion-col>
-    <ion-col size="12" sizeMd="4" sizeLg="5">
-      <ion-item>
-        <ion-label position="floating">Centro de trabajo</ion-label>
-        <ion-input
-        type="text"
-        name="T3"
-        [(ngModel)]="datos.T3"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Equipo</ion-label>
-        <ion-input
-        type="text"
-        name="T4"
-        [(ngModel)]="datos.T4"></ion-input>
-      </ion-item>
-    </ion-col>
-    <ion-col size="12" sizeMd="4" sizeLg="3">
-      <ion-item>
-        <ion-label position="floating">Fecha</ion-label>
-        <ion-datetime
-        display-format="DD.MM.YYYY"
-        name="F1"
-        [(ngModel)]="datos.F1"></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Localización / Pozo</ion-label>
-        <ion-input
-        type="text"
-        name="T5"
-        [(ngModel)]="datos.T5"></ion-input>
-      </ion-item>
-    </ion-col>
-  </ion-row>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <h6>Deberá de llenar los siguientes campos:</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" sizeMd="4" sizeLg="3">
+        <ion-item>
+          <ion-label position="floating">Región</ion-label>
+          <ion-input
+          type="text"
+          name="T1"
+          [(ngModel)]="datos.T1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Plataforma</ion-label>
+          <ion-input
+          type="text"
+          name="T2"
+          [(ngModel)]="datos.T2"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" sizeMd="4" sizeLg="5">
+        <ion-item>
+          <ion-label position="floating">Centro de trabajo</ion-label>
+          <ion-input
+          type="text"
+          name="T3"
+          [(ngModel)]="datos.T3"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Equipo</ion-label>
+          <ion-input
+          type="text"
+          name="T4"
+          [(ngModel)]="datos.T4"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" sizeMd="4" sizeLg="3">
+        <ion-item>
+          <ion-label position="floating">Fecha</ion-label>
+          <ion-input
+          type="date"
+          name="F1"
+          [(ngModel)]="datos.F1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Localización / Pozo</ion-label>
+          <ion-input
+          type="text"
+          name="T5"
+          [(ngModel)]="datos.T5"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row>
+      <ion-col size="12">
+        *En la siguiente carta podrá de dar "swipe" a la derecha o izquierda
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-slides>
     <ion-slide>
       <ion-card>
