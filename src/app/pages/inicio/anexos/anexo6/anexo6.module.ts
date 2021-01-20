@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../../../../components/component.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { Anexo6Page } from './anexo6.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    Anexo6PageRoutingModule
+    Anexo6PageRoutingModule,
+    ComponentsModule
   ],
   declarations: [Anexo6Page]
 })

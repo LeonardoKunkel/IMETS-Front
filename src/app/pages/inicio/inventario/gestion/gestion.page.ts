@@ -32,9 +32,9 @@ export class GestionPage implements OnInit {
 
   getInventario() {
     this.inventario.getInventario().subscribe((data: any) => {
-      this.superDatos = data.inv;
+      // this.superDatos = data.inv;
       console.log(data.inv);
-      // this.superDatos.push(data.inv[0]);
+      this.superDatos.push(data.inv[0]);
     });
   }
 

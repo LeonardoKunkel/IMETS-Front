@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class Anexo1Page implements OnInit {
 
+  headerImg = null;
   footerImg = null;
   datos: any = {
     C1: '',
@@ -266,7 +267,12 @@ export class Anexo1Page implements OnInit {
   image64() {
     this.convertFileDataURLviaFileReader(`../../../../../assets/imagenes/copyright_footer.png`).subscribe(
       base64 => {
-      this.footerImg = base64;
+        this.footerImg = base64;
+      }
+    );
+    this.convertFileDataURLviaFileReader(`../../../../../assets/icon/vms-transparencia.png`).subscribe(
+      base64 => {
+        this.headerImg = base64;
       }
     );
   }
@@ -324,6 +330,7 @@ export class Anexo1Page implements OnInit {
   }
 
   pdf() {
+    const header = this.headerImg;
     const footer = this.footerImg;
     const dd = {
       header() {
@@ -333,11 +340,11 @@ export class Anexo1Page implements OnInit {
             body: [
               [
                 {
-                  // image: 'sampleImage.jpg',
-                  // width: 50,
-                  // height: 50,
-                  // alignment: 'center',
-                  // rowSpan: 2
+                  image: `${header}`,
+                  width: 35,
+                  height: 50,
+                  alignment: 'center',
+                  rowSpan: 2
                 },
                 {text: 'Exploración y Producción', alignment: 'center', bold: true},
                 {}
@@ -369,7 +376,7 @@ export class Anexo1Page implements OnInit {
         return {
           table: {
             headerRows: 1,
-            widths: [510],
+            widths: [568],
             body: [
               [
                 {
@@ -382,15 +389,16 @@ export class Anexo1Page implements OnInit {
                 {
                   image: `${footer}`,
                   pageBreak: 'after',
-                  width: 510,
-                  height: 55
+                  width: 440,
+                  height: 55,
+                  alignment: 'center'
                 }
               ],
               ['']
             ]
           },
           layout: 'headerLineOnly',
-          margin: [72, 20]
+          margin: [22, 20]
         };
       },
       content: [
@@ -399,20 +407,20 @@ export class Anexo1Page implements OnInit {
             widths: [70, 60, 100, 100, 80, 104],
             body: [
               [
-                {text: 'Región'},
-                {text: `${this.datos.T1}`},
-                {text: 'Centro de Trabajo'},
-                {text: `${this.datos.T3}`},
-                {text: 'Fecha'},
-                 {text: `${this.datos.F1}`}
+                {text: 'Región:', fontSize: 9, alignment: 'right'},
+                {text: `${this.datos.T1}`, bold: true},
+                {text: 'Centro de Trabajo:', fontSize: 9, alignment: 'right'},
+                {text: `${this.datos.T3}`, bold: true},
+                {text: 'Fecha:', fontSize: 9, alignment: 'right'},
+                 {text: `${this.datos.F1}`, bold: true}
               ],
               [
-                {text: 'Plataforma'},
-                {text: `${this.datos.T2}`},
-                {text: 'Equipo'},
-                {text: `${this.datos.T4}`},
-                {text: 'Localización/Pozo'},
-                {text: `${this.datos.T5}`}
+                {text: 'Plataforma:', fontSize: 9, alignment: 'right'},
+                {text: `${this.datos.T2}`, bold: true},
+                {text: 'Equipo:', fontSize: 9, alignment: 'right'},
+                {text: `${this.datos.T4}`, bold: true},
+                {text: 'Localización/Pozo:', fontSize: 9, alignment: 'right'},
+                {text: `${this.datos.T5}`, bold: true}
               ],
             ]
           },
@@ -421,7 +429,7 @@ export class Anexo1Page implements OnInit {
         {text: '\n\n'},
         {
           table: {
-            widths: [300, 80, 50, 83],
+            widths: [300, 80, 50, 102],
             body: [
               [
                 {text: 'Requisitos de ASP', alignment: 'center', bold: true, fontSize: '10'},

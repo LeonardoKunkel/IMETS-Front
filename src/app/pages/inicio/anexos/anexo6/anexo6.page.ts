@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastController, AlertController } from '@ionic/angular';
 import { PdfMakerService } from 'src/app/services/pdf-maker.service';
@@ -8,6 +9,9 @@ import { PdfMakerService } from 'src/app/services/pdf-maker.service';
   styleUrls: ['./anexo6.page.scss'],
 })
 export class Anexo6Page implements OnInit {
+
+  information: any[];
+  automaticClose = false;
 
   valor: any[] = [];
   datos: any = {
@@ -22,10 +26,31 @@ export class Anexo6Page implements OnInit {
   constructor(
     private pdfMaker: PdfMakerService,
     public toastCtrl: ToastController,
-    public alertCtrl: AlertController
-  ) { }
+    public alertCtrl: AlertController,
+    private http: HttpClient
+  ) {
+    this.http.get('/assets/data/information.json').subscribe(res => {
+      this.information = res['items'];
+
+      this.information[0].open = true;
+    });
+  }
 
   ngOnInit() {
+  }
+
+  toggleSection(index) {
+    this.information[index].open = !this.information[index].open;
+
+    if (this.automaticClose && this.information[index].open) {
+      this.information
+      .filter((item, itemIndex) => itemIndex !== index)
+      .map(item => item.open = false);
+    }
+  }
+
+  toggleItem(index, childIndex) {
+    this.information[index].children[childIndex].open = !this.information[index].children[childIndex].open;
   }
 
   async auth() {
