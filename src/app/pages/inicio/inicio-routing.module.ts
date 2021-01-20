@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'opts',
     loadChildren: () => import('./opts/opts.module').then( m => m.OptsPageModule)
+  },  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
   }
+
 ];
 
 @NgModule({

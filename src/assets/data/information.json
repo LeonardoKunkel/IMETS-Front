@@ -1,0 +1,263 @@
+{
+    "items": [
+        {
+            "name": "1.0 TECNOLOGÍA DEL PROCESO",
+            "children": [
+                {
+                    "name": "1.1 ¿Se cuenta con el paquete tecnológico del proceso",
+                    "children": [
+                        {
+                            "name": "1.1.1 Bases de Diseño del Proceso",
+                            "children": [
+                                {
+                                    "name": "1.1.1.a ¿Se cuenta con el programa autorizado del pozo a intervenir?"
+                                },
+                                {
+                                    "name": "1.1.1.b ¿Cuenta el programa al menos con las siguientes variables críticas: Profundidad total, Presión máxima esperada, Temperatura máxima esperada, Peso máximo esperado, Tipo de fluido a utilizar y contenido de H2S?"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1.1.2 Bases de Diseño del Equipo",
+                            "children": [
+                                {
+                                    "name": "1.1.2.a ¿Se cuenta con la ficha técnica del equipo ACTUALIZADA y cumple con las características técnicas requeridas por el proceso, de acuerdo a las variables criticas esperadas?"
+                                },
+                                {
+                                    "name": "1.1.2.b ¿Se cuenta con el diagrama de la instalación y distribución del equipo? ¿Se encuentran actualizados?"
+                                },
+                                {
+                                    "name": "1.1.2.c  ¿Se cuenta con los diagramas unifilares y  DTIS actualizados?"
+                                },
+                                {
+                                    "name": "1.1.2.d ¿Se cuenta con el diagrama de clasificación de áreas eléctricas?"
+                                },
+                                {
+                                    "name": "1.1.2.e ¿Se cuenta con planos de la red de contraincendio (hidrantes, monitores, sistemas de aspersión y extintores)?"
+                                },
+                                {
+                                    "name": "1.1.2.f ¿Se cuenta con planos de localización de sistema de detección de humo,gas y fuego?"
+                                },
+                                {
+                                    "name": "1.1.2.g ¿Se cuenta con el plano de distribución de equipo de seguridad y salvamento?"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1.1.3 Hojas de Datos de Seguridad de los materiales del proceso?",
+                            "children": [
+                                {
+                                    "name": "1.1.3.a ¿Se cuenta con las hojas de seguridad de productos químicos por utilizar en el proceso?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2.0 ANÁLISIS DE RIESGOS DE PROCESOS",
+            "children": [
+                {
+                    "name": "2.1 ¿Se cuenta con el análisis de riesgos  de procesos?",
+                    "children": [
+                        {
+                            "name": "2.1.1 Análisis de riesgo de los sistemas operativos del equipo"
+                        },
+                        {
+                            "name": "2.1.2 Análisis de riesgo del proceso de perforación del pozo"
+                        },
+                        {
+                            "name": "2.1.3 Análisis de riesgo del medio ambiente"
+                        }
+                    ]
+                },
+                {
+                    "name": "2.2 ¿Se atendieron en tiempo y forma todas las recomendaciones derivadas de los análisis de riesgo ?"
+                },
+                {
+                    "name": "2.3 ¿El personal del equipo / instalación incluyendo los contratistas, conocen las recomendaciones del análisis de riesgo del proceso a desarrollarse?"
+                },
+                {
+                    "name": "2.4 ¿Se cuenta en el equipo / instalacion con la matriz de consecuencias y considera el  escenario mas catastrófico y probable contemplado para el proceso a desarrollar?"
+                }
+            ]
+        },
+        {
+            "name": "3.0 PROCEDIMIENTOS DE OPERACIÓN Y PRÁCTICAS SEGURAS DE TRABAJO",
+            "children": [
+                {
+                    "name": "3.1 ¿Se cuenta con el Manual de Operación del Equipo? Y este contempla procedimientos operativos que incluyen riesgos y capas de protección,así como las recomendaciones de los analisis  de riesgos de proceso??"
+                },
+                {
+                    "name": "3.2 ¿Se cuenta con los procedimientos críticos que salvan vidas y están vigentes y actualizados?"
+                },
+                {
+                    "name": "3.3 ¿Los procedimientos de operación normal y de emergencia estan disponibles y actualizados? ¿incluyen los límites de operación segura del proceso, así como las instrucciones para corregir o evitar desviaciones y las consecuencias de estas desviaciones?"
+                },
+                {
+                    "name": "3.4 ¿Los procedimientos contemplan  el manejo adecuado de los residuos que se generan en el proceso a desarrollar?"
+                },
+                {
+                    "name": "3.5 ¿Se cuenta con los instructivos de operación de los componentes criticos del equipo o instalación?"
+                }
+            ]
+        },
+        {
+            "name": "4.0 ADMINISTRACIÓN DE CAMBIOS DE TECNOLOGÍA",
+            "children": [
+                {
+                    "name": "4.1 ¿Se cuenta con el procedimiento para la administración de cambios de tecnologia, está vigente y actualizado?"
+                },
+                {
+                    "name": "4.2 ¿Se cuenta con el registro de los cambios tecnológicos realizados al equipo / instalación? ¿Se dispone de la documentación respectiva que demuestre que se siguió el procedimiento mencionado?"
+                },
+                {
+                    "name": "4.3 ¿Se encuentra actualizado el paquete tecnológico con respecto a los cambios tecnológicos registrados en el SIAC?"
+                },
+                {
+                    "name": "4.4 ¿Se llevó a cabo el análisis de riesgo del proceso, para contemplar los nuevos riesgos de acuerdo a la incorporación de los cambios de tecnología?"
+                },
+                {
+                    "name": "4.5 ¿El personal del equipo / instalación conoce estos cambios? ¿Los procedimientos operativos se actualizaron contemplando los riesgos generados por el cambio de tecnología y se contemplan sus medidas preventivas?"
+                }
+            ]
+        },
+        {
+            "name": "5.0 ENTRENAMIENTO Y DESEMPEÑO DEL  PERSONAL",
+            "children": [
+                {
+                    "name": "5.1 ¿Se cuenta con la relación actualizada de los instructivos de trabajo que aplica a cada categoria del equipo / instalación?"
+                },
+                {
+                    "name": "5.2 ¿Existen evidencias de que el personal involucrado en la operación y mantenimiento ha sido entrenado o reentrenado  de acuerdo a los instructivos de trabajo?"
+                }
+            ]
+        },
+        {
+            "name": "6.0 SEGURIDAD EN CONTRATISTAS",
+            "children": [
+                {
+                    "name": "6.1 ¿Existen evidencias de que los contratistas fueron entrenados y conocen los aspectos de Seguridad, Salud y Protección Ambiental relacionados con las áreas de trabajo y actividades a desarrollar?",
+                    "children": [
+                        {
+                            "name": "6.1.a ¿Los contratistas cuentan con la información de tecnología del proceso del pozo que se interviene?"
+                        },
+                        {
+                            "name": "6.1.b ¿Los contratistas cuentan con procedimientos de operación / mantenimiento de las actividades que realizaran dentro del proceso del pozo que se interviene?"
+                        },
+                        {
+                            "name": "6.1.c ¿Se cuenta con un censo de la capacitación del personal contratista que realiza funciones dentro del proceso del pozo que se interviene?"
+                        },
+                        {
+                            "name": "6.1.d ¿Los contratistas cumplen con el equipo de protección personal básico y especial que se requiere para las operaciones del proceso a desarrollar?"
+                        }
+                    ]
+                },
+                {
+                    "name": "6.2 ¿El personal de contratistas conoce las recomendaciones del análisis de riesgo así como el plan de respuesta a emergencia del proceso a desarrollarse?"
+                }
+            ]
+        },
+        {
+            "name": "7.0 ADMINISTRACIÓN DE CAMBIOS DE PERSONAL",
+            "children": [
+                {
+                    "name": "7.1 ¿Existe un mecanismo para asegurar que el perfil de candidatos a puestos de categorías críticas cumpla con el perfil de los puestos requeridos?"
+                },
+                {
+                    "name": "7.2 ¿Ha habido cambios de personas que tenían roles en emergencia o eran parte de las brigadas de respuesta a emergencias? ¿Los nuevos integrantes cumplen con el perfil requerido? ¿Han sido entrenados?"
+                },
+                {
+                    "name": "7.3 ¿Se cuenta con el procedimiento vigente y actualizado de la administración de cambios de personal?  ¿Se aplica en  los cambios de personal?"
+                }
+            ]
+        },
+        {
+            "name": "8.0 INVESTIGACIÓN DE INCIDENTES Y ACCIDENTES",
+            "children": [
+                {
+                    "name": "8.1 ¿Se cuenta con el control estadístico de incidentes / accidentes? ¿Incluye las Metas y Objetivos de la UNP referentes al Indice de Gravedad y de Frecuencia?"
+                },
+                {
+                    "name": "8.2 ¿Los mismos fueron investigados conforme al procedimiento vigente? ¿Hay recomendaciones que no han sido cumplidas?"
+                },
+                {
+                    "name": "8.3 ¿Hubo una amplia difusión entre el personal de UNP?"
+                }
+            ]
+        },
+        {
+            "name": "9.0 PLAN DE RESPUESTA A EMERGENCIAS",
+            "children": [
+                {
+                    "name": "9.1 ¿Existe un plan de respuesta a emergencias autorizado y el personal designado en los roles correspondientes esta entrenado en los procedimientos de respuesta a emergencias?"
+                },
+                {
+                    "name": "9.2 ¿Se cuenta con croquis que muestre: la organización para la respuesta a emergencia del equipo / instalación, procedimientos para cada escenario, la ruta de evacuación, punto de reunión, localización de extintores, detectores y alarmas indicadas?"
+                },
+                {
+                    "name": "9.3 ¿El plan de respuesta a emergencia es consistente con los escenarios del ARP del equipo / instalación? ¿se actualiza conforme a la administración de cambios de tecnología y cambios menores?"
+                },
+                {
+                    "name": "9.4 ¿Se cuenta con programa de simulacros para cada escenario del plan de respuesta a emergencias? ¿Existen evidencias de cumplimiento del mencionado programa?"
+                }
+            ]
+        },
+        {
+            "name": "10.0 INTEGRIDAD MECÁNICA Y ASEGURAMIENTO DE CALIDAD",
+            "children": [
+                {
+                    "name": "10.1 ¿Se cuenta con el programa de mantenimiento preventivo y predictivo de los componentes críticos del equipo, autorizado?"
+                },
+                {
+                    "name": "10.2. ¿Se cuenta con planes y programas de las inspecciones y prueba de los componentes críticos para garantizar la integridad mecánica de los sistemas operacionales tales como: sistema de izaje y rotación, sistema de generación, sistema de bombeo de fluidos, sistema de control superficial y sistema de seguridad y salvamento?",
+                    "children": [
+                        {
+                            "name": "10.2.a Sistema de izaje y rotación"
+                        },
+                        {
+                            "name": "10.2.b Sistema de generación"
+                        },
+                        {
+                            "name": "10.2.c Sistema de bombeo de fluidos"
+                        },
+                        {
+                            "name": "10.2.d Sistema de control superficial"
+                        },
+                        {
+                            "name": "10.2.e Sistema de Seguridad y Salvamento"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "11.0 ADMINISTRACIÓN DE CAMBIOS MENORES",
+            "children": [
+                {
+                    "name": "11.1 ¿Los cambios realizados durante la operación, modificación, rehabilitación, instalación y desmantelamiento de los equipos estan documentados, autorizados, realizados y difundidos?"
+                }
+            ]
+        },
+        {
+            "name": "12.0 MEDIO AMBIENTE",
+            "children": [
+                {
+                    "name": "12.1 ¿Todas las licencias y permisos ambientales requeridas han sido obtenidas?"
+                },
+                {
+                    "name": "12.2 ¿Existen procedimientos para disposición de residuos peligrosos de manejo especial  y sólidos urbanos?. ¿Se aplican? Presentar evidencias"
+                }
+            ]
+        },
+        {
+            "name": "13.0 SALUD EN EL TRABAJO (SALUD OCUPACIONAL)",
+            "children": [
+                {
+                    "name": "13.1 ¿Se cuenta con el Atlas de Riesgo vigente y autorizado de la instalación y es conocido por el personal?"
+                }
+            ]
+        }
+    ]
+}

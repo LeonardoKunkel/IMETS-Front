@@ -29,6 +29,10 @@ export class InicioPage implements OnInit {
     this.navCtrl.navigateForward('/inicio/inventario');
   }
 
+  goMap() {
+    this.navCtrl.navigateForward('/inicio/mapa');
+  }
+
   config() {
     this.navCtrl.navigateForward('/inicio/opts');
   }

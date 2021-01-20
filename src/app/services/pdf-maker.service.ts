@@ -16,9 +16,9 @@ export class PdfMakerService {
       // Descargar el pdf
     // this.pdfObj.download(title);
       // Ver en la misma ventana
-    this.pdfObj.open({}, window);
+    // this.pdfObj.open({}, window);
       // Abrir en otra ventana
-    // this.pdfObj.open({title});
+    this.pdfObj.open({title});
       // Imprimir el pdf
     // this.pdfObj.print();
   }

@@ -20,7 +20,7 @@
       <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goAnexos()">
           <ion-card-content class="ion-text-center">
-            <img src="../../../assets/icon/revision de anexos.png">
+            <img src="../../../assets/icon/terreno.png" height="200px" width="200px">
           </ion-card-content>
           <ion-footer class="ion-no-border">
             <ion-toolbar color="success">
@@ -32,7 +32,7 @@
       <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goDti()">
           <ion-card-content class="ion-text-center">
-            <img src="../../../assets/icon/Dti.png">
+            <img src="../../../assets/icon/oil-well.png" height="200px" width="200px">
           </ion-card-content>
           <ion-footer class="ion-no-border">
             <ion-toolbar color="tertiary">
@@ -46,7 +46,7 @@
       <ion-col size="12" sizeMd="4" sizeLg="4">
         <ion-card (click)="goInvent()">
           <ion-card-content class="ion-text-center">
-            <img src="../../../assets/icon/control de inventarios.png">
+            <img src="../../../assets/icon/inventario.png"height="200px" width="200px">
           </ion-card-content>
           <ion-footer class="ion-no-border">
             <ion-toolbar color="danger">
@@ -58,5 +58,8 @@
         </ion-card>
       </ion-col>
     </ion-row>
+    <ion-button (click)="goMap()" expand="block" shape="round" color="warning">
+      Mapa
+    </ion-button>
   </ion-grid>
 </ion-content>

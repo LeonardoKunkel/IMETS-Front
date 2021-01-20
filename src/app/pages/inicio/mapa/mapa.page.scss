@@ -1,0 +1,15 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+#mapa-mapbox {
+    width: 2000px;
+    height: 1000px;
+    background-color: crimson;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
