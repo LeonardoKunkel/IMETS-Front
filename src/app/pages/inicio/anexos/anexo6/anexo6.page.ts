@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastController, AlertController } from '@ionic/angular';
+import { AnexosService } from 'src/app/services/anexos.service';
 import { PdfMakerService } from 'src/app/services/pdf-maker.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class Anexo6Page implements OnInit {
   information: any[];
   automaticClose = false;
 
+  newDatos: any[] = [];
   valor: any[] = [];
   datos: any = {
     fecha1: '',
@@ -27,7 +29,8 @@ export class Anexo6Page implements OnInit {
     private pdfMaker: PdfMakerService,
     public toastCtrl: ToastController,
     public alertCtrl: AlertController,
-    private http: HttpClient
+    private http: HttpClient,
+    private a6Service: AnexosService
   ) {
     this.http.get('/assets/data/information.json').subscribe(res => {
       this.information = res['items'];
@@ -37,6 +40,20 @@ export class Anexo6Page implements OnInit {
   }
 
   ngOnInit() {
+    this.getAnexo6();
+  }
+
+  getAnexo6() {
+    this.a6Service.getA6().subscribe((data: any) => {
+      console.log(data);
+      this.datos = data;
+    });
+  }
+
+  postAnexo6() {
+    this.a6Service.postA6(this.datos).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   toggleSection(index) {

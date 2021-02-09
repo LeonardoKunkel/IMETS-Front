@@ -43,7 +43,26 @@ export class UpdatePage implements OnInit {
     });
   }
 
+  total() {
+    const total = [
+      this.post.baja,
+      this.post.cambio,
+      this.post.cementados,
+      this.post.chuecos,
+      this.post.inspeccionar,
+      this.post.maquinar,
+      this.post.nuevos,
+      this.post.perdidas,
+      this.post.premium,
+      this.post.sinRevestimiento,
+    ];
+    let suma = 0;
+    for(let i of total) suma += i;
+    this.post.total = suma;
+  }
+
   updateSpecs() {
+    this.total();
     // console.log(this.post._id);
     this.inventario.updateSpecs(this.post._id, {
       ubicacion: this.post.ubicacion,
