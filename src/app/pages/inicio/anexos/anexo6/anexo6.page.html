@@ -21,37 +21,57 @@
       <ion-icon name="print-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <ion-list *ngFor="let item of information; let i = index;"
+  
+  
+  
+  
+  <ion-row>
+    <ion-col size="11">
+      <ion-list *ngFor="let item of information; let i = index;"
             class="accordeon-list"
             lines="none"
             detail="false"
             class="ion-no-padding">
-    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open, 'section': !item.open}">
-      <ion-icon slot="start" name="arrow-forward" *ngIf="!item.open"></ion-icon>
-      <ion-icon slot="start" name="arrow-down" *ngIf="item.open"></ion-icon>
-      <ion-label>{{ item.name }}</ion-label>
-    </ion-item>
-    
-    <div *ngIf="item.children && item.open">
-      <ion-list *ngFor="let child of item.children; let j = index" lines="none" class="child-list">
-        <ion-item tappable (click)="toggleItem(i, j)" *ngIf="child.children" [ngClass]="{'child-active': child.open, 'child': !child.open}">
-          <ion-icon slot="start" name="add" *ngIf="!child.open"></ion-icon>
-          <ion-icon slot="start" name="close" *ngIf="child.open"></ion-icon>
-          <ion-label>{{ child.name }}</ion-label>
+        <ion-item tappable (click)="toggleSection(i)"
+                  [ngClass]="{'section-active': item.open, 'section': !item.open}">
+          <ion-icon slot="start" name="arrow-forward" *ngIf="!item.open"></ion-icon>
+          <ion-icon slot="start" name="arrow-down" *ngIf="item.open"></ion-icon>
+          <ion-label>{{ item.name }}</ion-label>
         </ion-item>
+    
+        <div *ngIf="item.children && item.open">
+          <ion-list *ngFor="let child of item.children; let j = index" lines="none" class="child-list">
+            <ion-item tappable (click)="toggleItem(i, j)" *ngIf="child.children" [ngClass]="{'child-active': child.open, 'child': !child.open}">
+              <ion-icon slot="start" name="add" *ngIf="!child.open"></ion-icon>
+              <ion-icon slot="start" name="close" *ngIf="child.open"></ion-icon>
+              <ion-label>{{ child.name }}</ion-label>
+            </ion-item>
         
-        <app-product [product]="child" *ngIf="!child.children"></app-product>
+            <app-product [product]="child" *ngIf="!child.children"></app-product>
         
-        <ion-list *ngIf="child.children && child.open" class="product-list" lines="none">
-          <app-product [product]="product" *ngFor="let product of child.children"></app-product>
-        </ion-list>
+            <ion-list *ngIf="child.children && child.open" class="product-list" lines="none">
+              <app-product [product]="product" *ngFor="let product of child.children"></app-product>
+            </ion-list>
         
+          </ion-list>
+        </div>
+    
+        <p *ngIf="item.children.length == 0 && item.open" text-center>Sorry, nothing in here!</p>
+    
       </ion-list>
-    </div>
-    
-    <p *ngIf="item.children.length == 0 && item.open" text-center>Sorry, nothing in here!</p>
-    
-  </ion-list>
+    </ion-col>
+    <ion-col size="1">
+      <ion-list *ngFor="" lines="none" detail="false" class="ion-no-padding">
+        <ion-item>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  
+  
+  
+  
   <ion-grid fixed>
     <ion-card>
       <ion-card-header>

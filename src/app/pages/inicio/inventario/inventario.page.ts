@@ -1,6 +1,6 @@
 import { InventarioService } from './../../../services/inventario.service';
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inventario',
@@ -8,7 +8,10 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./inventario.page.scss'],
 })
 export class InventarioPage implements OnInit {
+
   specs: any = [];
+  post: any = [];
+  posts: any = [];
   diametro: any = [
     '2 7/8',
     '3 1/2',
@@ -58,15 +61,74 @@ export class InventarioPage implements OnInit {
 
   constructor(
     private inventario: InventarioService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private alertCtrl: AlertController
   ) { }
 
   ngOnInit() {
-    this.inventario.getInventario()
-      .subscribe( (data: any) => {
+  }
+
+  loadPost() {
+    this.inventario.getInventario().subscribe(
+      (data: any) => {
         console.log(data);
         this.specs = data.inv;
-      });
+      },
+      (err) => console.log(err)
+    );
+  }
+
+  ionViewWillEnter() {
+    this.loadPost();
+  }
+
+  async deletePost(id) {
+    const alert = await this.alertCtrl.create({
+      header: 'Remover',
+      subHeader: 'Remover este elemento',
+      message: 'Are you sure?',
+      buttons: [{
+        text: 'Ok',
+        handler: () => {
+          console.log(id);
+        }
+      }]
+    });
+    await alert.present();
+  }
+
+  editPost(id: string) {
+    console.log(id);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  goBusqueda() {
+    this.navCtrl.navigateForward('/inicio/inventario/busqueda');
+  }
+
+  goGestion() {
+    this.navCtrl.navigateForward('/inicio/inventario/gestion');
+  }
+
+  goTaller() {
+    this.navCtrl.navigateForward('/inicio/inventario/taller');
+  }
+
+  goEnvio() {
+    this.navCtrl.navigateForward('/inicio/inventario/envio');
   }
 
   getDiametros() {
@@ -101,10 +163,6 @@ export class InventarioPage implements OnInit {
       console.log(diametro);
       return diametro === spec.diametro;
     });
-  }
-
-  goGestion() {
-    this.navCtrl.navigateForward('/inicio/inventario/gestion');
   }
 
 }

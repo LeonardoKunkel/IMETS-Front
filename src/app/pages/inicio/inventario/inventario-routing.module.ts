@@ -9,9 +9,13 @@ const routes: Routes = [
     component: InventarioPage
   },
   {
-    path: 'gestion',
-    loadChildren: () => import('./gestion/gestion.module').then( m => m.GestionPageModule)
+    path: 'update',
+    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
   },
+  {
+    path: 'update/:id',
+    loadChildren: () => import('./update/update.module').then(m => m.UpdatePageModule)
+  }
 ];
 
 @NgModule({

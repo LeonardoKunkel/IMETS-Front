@@ -1,6 +1,8 @@
 import { PdfMakerService } from './../../../../services/pdf-maker.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IonSlides } from '@ionic/angular';
+import { AnexosService } from 'src/app/services/anexos.service';
 
 @Component({
   selector: 'app-anexo1',
@@ -9,8 +11,11 @@ import { Observable } from 'rxjs';
 })
 export class Anexo1Page implements OnInit {
 
+  @ViewChild('slides') slides: IonSlides;
+
   headerImg = null;
   footerImg = null;
+  newDatos: any[] = [];
   datos: any = {
     C1: '',
     C2: '',
@@ -241,10 +246,33 @@ export class Anexo1Page implements OnInit {
     J48: '',
   };
 
-  constructor( private pdfMaker: PdfMakerService ) { }
+
+  constructor( private pdfMaker: PdfMakerService, private a1Service: AnexosService ) { }
 
   ngOnInit() {
     this.image64();
+    this.getDatos();
+  }
+
+  public next() {
+    this.slides.slideNext();
+  }
+
+  public prev() {
+    this.slides.slidePrev();
+  }
+
+  getDatos() {
+    this.a1Service.getA1().subscribe((data: any) => {
+      console.log(data);
+      this.newDatos = data;
+    });
+  }
+
+  postDatos() {
+    this.a1Service.postA1(this.datos).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   convertFileDataURLviaFileReader(url: string) {
