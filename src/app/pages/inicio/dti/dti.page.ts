@@ -48,18 +48,19 @@ export class DTIPage implements OnInit {
     console.log(valorSeg);
   }
 
+  getDti() {
+    this.dtiService.getDti().subscribe((data: any) => {
+      console.log(data);
+      this.actividades = data.dti;
+    });
+  }
+
   postDti() {
     this.datos.tipo = this.tipo;
     console.log(this.datos);
     this.dtiService.postDti(this.datos).subscribe((data: any) => {
       console.log(data);
-    });
-  }
-
-  getDti() {
-    this.dtiService.getDti().subscribe((data: any) => {
-      console.log(data);
-      this.actividades = data.dti;
+      this.getDti();
     });
   }
 

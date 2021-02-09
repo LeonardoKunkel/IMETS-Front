@@ -1,6 +1,7 @@
 import { PdfMakerService } from './../../../../services/pdf-maker.service';
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
+import { AnexosService } from 'src/app/services/anexos.service';
 
 @Component({
   selector: 'app-anexo4',
@@ -9,6 +10,7 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class Anexo4Page implements OnInit {
 
+  newDatos: any[] = [];
   valores: any[] = [];
   datos: any = {
     fecha1: '',
@@ -29,10 +31,25 @@ export class Anexo4Page implements OnInit {
   constructor(
     private pdfMaker: PdfMakerService,
     public alertCtrl: AlertController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private a4Service: AnexosService
   ) { }
 
   ngOnInit() {
+    this.getA4();
+  }
+
+  getA4() {
+    this.a4Service.getA4().subscribe((data: any) => {
+      console.log(data);
+      this.newDatos = data;
+    });
+  }
+
+  postA4() {
+    this.a4Service.postA4(this.datos).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   async openAlert() {

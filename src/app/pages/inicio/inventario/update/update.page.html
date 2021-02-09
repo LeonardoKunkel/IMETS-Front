@@ -19,62 +19,62 @@
           
             <ion-item>
               <ion-label position="floating">Ubicación</ion-label>
-              <ion-input [(ngModel)]="post.ubicacion"></ion-input>
+              <ion-input  [(ngModel)]="post.ubicacion"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Nuevos</ion-label>
-              <ion-input [(ngModel)]="post.nuevos"></ion-input>
+              <ion-input type="number" id="v1" [(ngModel)]="post.nuevos"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Premium</ion-label>
-              <ion-input [(ngModel)]="post.premium"></ion-input>
+              <ion-input type="number" id="v2" [(ngModel)]="post.premium"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Por Maquinar</ion-label>
-              <ion-input [(ngModel)]="post.maquinar"></ion-input>
+              <ion-input type="number" id="v3" [(ngModel)]="post.maquinar"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Por Cambio de Junta</ion-label>
-              <ion-input [(ngModel)]="post.cambio"></ion-input>
+              <ion-input type="number" id="v4" [(ngModel)]="post.cambio"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Por Inspeccionar</ion-label>
-              <ion-input [(ngModel)]="post.inspeccionar"></ion-input>
+              <ion-input type="number" id="v5" [(ngModel)]="post.inspeccionar"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Por dar de Baja</ion-label>
-              <ion-input [(ngModel)]="post.baja"></ion-input>
+              <ion-input type="number" id="v6" [(ngModel)]="post.baja"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Perdidas</ion-label>
-              <ion-input [(ngModel)]="post.perdidas"></ion-input>
+              <ion-input type="number" id="v7" [(ngModel)]="post.perdidas"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Cementados</ion-label>
-              <ion-input [(ngModel)]="post.cementados"></ion-input>
+              <ion-input type="number" id="v8" [(ngModel)]="post.cementados"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Chuecos</ion-label>
-              <ion-input [(ngModel)]="post.chuecos"></ion-input>
+              <ion-input type="number" id="v9" [(ngModel)]="post.chuecos"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Sin Revestimiento</ion-label>
-              <ion-input [(ngModel)]="post.sinRevestimiento"></ion-input>
+              <ion-input type="number" id="v10" [(ngModel)]="post.sinRevestimiento"></ion-input>
             </ion-item>
             
             <ion-item>
               <ion-label position="floating">Total</ion-label>
-              <ion-input [(ngModel)]="post.total"></ion-input>
+              <ion-input type="number" id="total" [(ngModel)]="post.total"></ion-input>
             </ion-item>
             
             <ion-button color="success" expand="full" shape="round" (click)="updateSpecs()">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
+import { AnexosService } from 'src/app/services/anexos.service';
 import { PdfMakerService } from 'src/app/services/pdf-maker.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { PdfMakerService } from 'src/app/services/pdf-maker.service';
 })
 export class Anexo5Page implements OnInit {
 
+  newDatos: any[] = [];
   valor: any[] = [];
   datos: any = {
     fecha1: '',
@@ -22,10 +24,25 @@ export class Anexo5Page implements OnInit {
   constructor(
     private pdfMaker: PdfMakerService,
     public toastCtrl: ToastController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    private a5Service: AnexosService
   ) { }
 
   ngOnInit() {
+    this.getA5();
+  }
+
+  getA5() {
+    this.a5Service.getA5().subscribe((data: any) => {
+      console.log(data);
+      this.newDatos = data;
+    });
+  }
+
+  postA5() {
+    this.a5Service.postA5(this.datos).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   async auth() {
