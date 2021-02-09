@@ -214,19 +214,128 @@
                     "name": "10.2. ¿Se cuenta con planes y programas de las inspecciones y prueba de los componentes críticos para garantizar la integridad mecánica de los sistemas operacionales tales como: sistema de izaje y rotación, sistema de generación, sistema de bombeo de fluidos, sistema de control superficial y sistema de seguridad y salvamento?",
                     "children": [
                         {
-                            "name": "10.2.a Sistema de izaje y rotación"
+                            "name": "10.2.a Sistema de izaje y rotación",
+                            "children": [
+                                {
+                                    "name": "Registro de inspección de tambores y balatas de frenado / discos"
+                                },
+                                {
+                                    "name": "Registro de inspección y récord del cable de operación (ton/km) y ancla de la línea muerta"
+                                },
+                                {
+                                    "name": "Registro de inspeccion de corona"
+                                },
+                                {
+                                    "name": "Registro de inspección de paro de emergencia"
+                                },
+                                {
+                                    "name": "Registro de inspección de embragues de alta y baja"
+                                },
+                                {
+                                    "name": "Registro de inspección de calibración de poleas"
+                                },
+                                {
+                                    "name": "Registro de inspección de mástil/torre y subestructura"
+                                },
+                                {
+                                    "name": "Registro de inspección y calibración de indicador de peso"
+                                },
+                                {
+                                    "name": "Registro de inspección , pruebas y certificados de gruas "
+                                },
+                                {
+                                    "name": "Registro de inspección , pruebas y certificados de malacates neumáticos"
+                                },
+                                {
+                                    "name": "Registro  de permisos para trabajo con riesgo (izaje de mástil)"
+                                }
+                            ]
                         },
                         {
-                            "name": "10.2.b Sistema de generación"
+                            "name": "10.2.b Sistema de generación",
+                            "children": [
+                                {
+                                    "name": "Registro de inspección de equipo de acuerdo a las áreas eléctricas clasificadas"
+                                },
+                                {
+                                    "name": "Registro de inspección  y medición de sistema de tierras"
+                                },
+                                {
+                                    "name": "Registro de aplicación de tarjeta-candado (certificados de aislamiento SPPTR)"
+                                },
+                                {
+                                    "name": "Órdenes de trabajo del mantenimiento de unidad de aire acondicionado en la PCR"
+                                },
+                                {
+                                    "name": "Registro de inspección y licencia de funcionamiento de recipientes sujetos a presión, por cada recipente"
+                                }
+                            ]
                         },
                         {
-                            "name": "10.2.c Sistema de bombeo de fluidos"
+                            "name": "10.2.c Sistema de bombeo de fluidos",
+                            "children": [
+                                {
+                                    "name": "Registro de inspección y calibración de la válvula de seguridad"
+                                },
+                                {
+                                    "name": "Registro de inspección de bombas para lodo"
+                                },
+                                {
+                                    "name": "Registro de inspección y prueba del stand pipe, tubería, unión giratoria y manguera de perforación"
+                                },
+                                {
+                                    "name": "Registro de inspección y prueba del equipo de control de sólidos"
+                                },
+                                {
+                                    "name": "Registro de vida útil de los componetes del extremo hidráulico"
+                                }
+                            ]
                         },
                         {
-                            "name": "10.2.d Sistema de control superficial"
+                            "name": "10.2.d Sistema de control superficial",
+                            "children": [
+                                {
+                                    "name": "Registro de inspección y prueba de preventores de acuerdo a etapa"
+                                },
+                                {
+                                    "name": "Registro de inspección y prueba de la bomba para operar preventores"
+                                },
+                                {
+                                    "name": "Registro de inspeccion y prueba del ensamble de estrangulación y consola"
+                                },
+                                {
+                                    "name": "Registro de inspección y prueba de línea de matar y estrangular "
+                                },
+                                {
+                                    "name": "Registro de inspección y prueba de separador de gas-lodo"
+                                }
+                            ]
                         },
                         {
-                            "name": "10.2.e Sistema de Seguridad y Salvamento"
+                            "name": "10.2.e Sistema de Seguridad y Salvamento",
+                            "children": [
+                                {
+                                    "name": "Registro de inspección y pruebas de Red  contraincendio, incluyendo Bombas"
+                                },
+                                {
+                                    "name": "Registro de inspección, pruebas y certificados de botes salvavidas"
+                                },
+                                {
+                                    "name": "Registro de inspeccion y pruebas del sistema de detección de humo, gas y fuego"
+                                },
+                                {
+                                    "name": "Registro de inspección, pruebas y certificados de vigencia en los extintores portátiles"
+                                },
+                                {
+                                    "name": "Registro de inspección, pruebas y certificados de vigencia de los equipos fijo y semifijo de extinción"
+                                },
+                                {
+                                    "name": "Registro de inspección y pruebas de lava ojos y regaderas de emergencias"
+                                },
+                                {
+                                    "name": "Registro de inspección y pruebas de equipo de respiración autónomo"
+                                }
+                            ]
                         }
                     ]
                 }

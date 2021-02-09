@@ -12,3 +12,28 @@
     background-color: rgb(123, 255, 156);
     text-align: justify;
 }
+
+.backBtn{
+    position: absolute;
+    left: 20vw;
+    top: 40vh;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+}
+
+.nextBtn{
+    position: absolute;
+    float: right;
+    right: 20vw;
+    top: 40vh;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+}
+
+.slide-full {
+    height: 100% !important;
+}

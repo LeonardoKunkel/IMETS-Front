@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment.prod';
-import { MapboxService, Feature } from './../../../services/mapbox.service';
+import { MapboxService } from './../../../services/mapbox.service';
 import { Component, OnInit } from '@angular/core';
 import * as Mapboxgl from 'mapbox-gl';
 

@@ -31,10 +31,14 @@ export class DTIPage implements OnInit {
     private dtiService: DtiService,
     public toast: ToastController,
     public modalCtrl: ModalController
-  ) { }
+  ) {  }
 
   ngOnInit() {
     this.hyperDatos = this.dtiService.getDtiDatos();
+    this.getDti();
+  }
+
+  ionViewWillEnter() {
     this.getDti();
   }
 
@@ -60,9 +64,11 @@ export class DTIPage implements OnInit {
   }
 
   async delete(id: string) {
-    this.dtiService.deleteDtiId(id).subscribe((data: any) => {
-      console.log(data);
-    });
+    this.dtiService.deleteDtiId(id).subscribe(
+      (data: any) => {
+        this.getDti();
+      }
+    );
     const toast = await this.toast.create({
       message: 'Actividad eliminada',
       duration: 1500
